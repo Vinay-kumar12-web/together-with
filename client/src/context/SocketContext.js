@@ -12,7 +12,7 @@ export const SocketProvider = ({ children }) => {
   useEffect(() => {
     if (!user) return;
 
-    socketRef.current = io(process.env.REACT_APP_SOCKET_URL || 'http://localhost:5000', {
+    socketRef.current = io(process.env.REACT_APP_SOCKET_URL , {
       transports: ['websocket'],
       reconnectionAttempts: 5,
       reconnectionDelay: 1000,
