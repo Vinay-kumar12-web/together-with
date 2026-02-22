@@ -12,7 +12,7 @@ const server = http.createServer(app);
 // ── Socket.io ────────────────────────────────────────────
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || 'http://localhost:3000',
+    origin: process.env.CLIENT_URL ,
     methods: ['GET', 'POST'],
     credentials: true
   },
@@ -21,7 +21,7 @@ const io = new Server(server, {
 
 // ── Middleware ───────────────────────────────────────────
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: process.env.CLIENT_URL ,
   credentials: true
 }));
 app.use(express.json());
