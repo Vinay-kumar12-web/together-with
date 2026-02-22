@@ -153,5 +153,5 @@ io.on('connection', (socket) => {
 // ── Start ─────────────────────────────────────────────────
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
-  console.log(`🚀 TogetherWatch server on http://localhost:${PORT}`);
+  console.log(`🚀 TogetherWatch server on ${PORT}`);
 });
